@@ -1,0 +1,143 @@
+:root {
+	--blue-dark: #0096CE;
+	--blue-medium: #44B6E0;
+	--blue-light: #7ADBFF;
+	--gray-light: #eaeaea;
+	--white: #f4fffd;
+}
+
+body {
+	font-size: 20px;
+	font-family: 'Dosis', sans-serif;
+}
+
+.menu {
+	background-color: var(--blue-medium);
+	width: 100%;
+	position: sticky;
+	top: 0;
+	padding: 5px;
+	z-index: 999;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	font-style: italic;
+	margin-bottom: 60px;
+}
+
+.menu a {
+	display: inline-block;
+	padding: 10px 30px;
+	font-size: 26px;
+	background-color: var(--blue-medium);
+	margin: 0 10px;
+	transition: .5s ease all;
+	color: var(--gray-light);
+	text-decoration: none;
+}
+
+.menu a:hover {
+	transform: translateY(18px);
+	background-color: var(--blue-light);
+}
+
+
+.subtitulo {
+	font-size: 20px;
+	color: var(--blue-dark);
+	font-weight: 700;
+	z-index: 2;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.subtitulo span {
+	background-color: var(--gray-light);
+	padding: 0 15px;
+	z-index: 99;
+	position: relative;
+}
+
+.subtitulo::after {
+	content: "";
+	display: inline-block;
+	height: 2px;
+	width: 100%;
+	background: var(--blue-dark);
+	position: relative;
+	top: -29px;
+	z-index: 1;
+}
+
+.nosotros.titulo {
+	width: 70%;
+	font-size: 44px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 50px;
+}
+
+
+.salas {
+	background: var(--gray-light);
+	padding: 20px;
+	margin-bottom: 60px; 
+}
+
+.salas .titulo {
+	width: 70%;
+	font-size: 44px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 50px;
+}
+
+.salas .salaimg{
+	position: relative;
+	width: 100%;
+}
+
+.salas .overlay{
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: var(--blue-light);
+	overflow: hidden;
+	transition: .5s ease;
+}
+
+.salas .salaimg:hover .overlay{
+	width: 100%;
+	opacity: .8;
+}
+
+
+.salas .salaimg .overlay-texto{
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	white-space: nowrap;
+	color: black;
+	font-size: 18px;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	border-top: 1px solid #0096CE;
+	border-bottom: 1px solid #0096CE;
+}
+
+.enlace{
+	display: inline-block;
+	margin-top: 10px;
+	color: var(--blue-light);
+	font-weight: 700;
+	border-bottom: 1px solid transparent;
+	transition: .3s ease all;
+}
+.enlace:hover{
+	text-decoration: none;
+	letter-spacing: 3px;
+	border-bottom: 1px solid var(--blue-light);
+}
