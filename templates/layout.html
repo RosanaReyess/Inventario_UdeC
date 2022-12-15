@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Formulario{% endblock %}
+
+{% block customCSS %}
+
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+        crossorigin="anonymous"
+      />
+    <link  rel="Stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/normalize.css')}}"></link>
+
+{% endblock %}
+
+{% block body %}
+
+	<nav class="menu">
+		<a href="/login">Salir</a>
+	</nav>
+
+	<main class="container">
+
+		<div class="row salas">
+			<article class="col-12 text-center">
+				<h2 class="subtitulo"><span>Salas De Informatica</span></h2>
+				<p>Universidad de Cartagena</p>
+			</article>
+
+			<div class="col-12">
+				<div class="row justify-content-center">
+					<article class="<col-6 col-lg-3 py-1>">
+						<figure class="salaimg">
+							<img src="{{ url_for('static', filename='img/salas/img5.jpg')}}" class="img-fluid" alt="">	
+							<figcaption class="overlay">
+								<p class="overlay-texto">Aula Activa #1</p>
+							</figcaption>													
+						</figure>
+						<a href="/sala" title="" class="enlace">Inventario Aula #1</a>
+					</article>
+
+					<article class="<col-6 col-lg-3 py-1>">
+						<figure class="salaimg">
+							<img src="{{ url_for('static', filename='img/salas/img5.jpg')}}" class="img-fluid" alt="">	
+							<figcaption class="overlay">
+								<p class="overlay-texto">Sala De Informatica #1</p>
+							</figcaption>						
+						</figure>
+						<a href="/form" title="" class="enlace">Inventario Sala #1</a>
+					</article>
+
+					<article class="<col-6 col-lg-3 py-1>">
+						<figure class="salaimg">
+							<img src="{{ url_for('static', filename='img/salas/img5.jpg')}}" class="img-fluid" alt="">	
+							<figcaption class="overlay">
+								<p class="overlay-texto">Sala de Informatica #2</p>
+							</figcaption>						
+						</figure>
+						<a href="/sala3" title="" class="enlace">Inventario Sala #2</a>
+					</article>
+				</div>
+			</div>
+			
+		</div>
+	</main>
+{% endblock %}
